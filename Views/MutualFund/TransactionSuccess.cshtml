@@ -1,0 +1,24 @@
+﻿@* Views/MutualFund/TransactionSuccess.cshtml *@
+@{
+    ViewData["Title"] = "Transaction Success"; // Set the title of the page
+}
+
+<div class="container mt-3">
+    <!-- Card container for displaying success message -->
+    <div class="card" style="background-color: #8D493A; color: #FFFFFF; padding: 20px;">
+        <!-- Header section of the card -->
+        <div class="text-center mb-4">
+            <h4 class="alert">Success!</h4> <!-- Main success message -->
+        </div>
+        <!-- Image section below the main heading -->
+        <div class="text-center mb-4">
+            <img src="~/images/transaction-success.svg" alt="Success Icon" style="width: 250px; height: auto;"> <!-- Image indicating success -->
+        </div>
+        <!-- Text message about the transaction success -->
+        <p class="text-center mb-4">Hurray! Your transaction was processed successfully!</p>
+        <!-- Button to return to the home page -->
+        <div class="text-center">
+            <a href="@Url.Action("Index", "Home")" class="btn" style="background-color: #F8EDE3; color: #8D493A;">Return to Home</a> <!-- Link to return to the home page -->
+        </div>
+    </div>
+</div>

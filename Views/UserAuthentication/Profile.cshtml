@@ -1,0 +1,161 @@
+﻿@model Investment1.Models.UserProfileViewModel
+
+<div class="profile-container">
+    <div class="image-container">
+        <img src="/images/Profile.svg" alt="Profile Image" class="profile-image">
+    </div>
+
+    <div class="form-container">
+        <h1>Your Profile</h1>
+
+        <form asp-action="Profile" method="post" class="profile-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Mobile" class="control-label"></label>
+                    <input asp-for="Mobile" class="form-control" />
+                    <span asp-validation-for="Mobile" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label>
+<textarea asp-for="Address" class="form-control"></textarea>
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PIN" class="control-label"></label>
+                    <input asp-for="PIN" class="form-control" />
+                    <span asp-validation-for="PIN" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label">Email</label>
+                    <input asp-for="Email" class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AccountNo" class="control-label">Account Number</label>
+                    <input asp-for="AccountNo" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="IFSCCode" class="control-label">IFSC Code</label>
+                    <input asp-for="IFSCCode" class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PAN" class="control-label">PAN</label>
+                    <input asp-for="PAN" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label asp-for="Aadhaar" class="control-label">Aadhaar</label>
+                    <input asp-for="Aadhaar" class="form-control" readonly />
+                </div>
+            </div>
+
+            <div class="form-row button-row">
+                <button type="submit" class="btn save-btn">Save Changes</button>
+            </div>
+        </form>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .profile-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-container {
+        flex: 2;
+        padding-left: 20px;
+    }
+
+    .profile-form {
+        max-width: 800px;
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+        .form-group:last-child {
+            margin-right: 0;
+        }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .save-btn {
+        background-color: #8D493A;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .button-row {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .alert {
+        color: white;
+        background-color: #8D493A;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+</style>

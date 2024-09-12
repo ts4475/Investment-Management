@@ -1,0 +1,112 @@
+﻿@model Investment1.Models.UpdateSIPViewModel
+
+@{
+    ViewData["Title"] = "Update SIP Amount"; // Set the page title
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"]</title> <!-- Title for the webpage -->
+    <!-- Include Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style for the body */
+        body {
+            background-color: #f8f9fa; /* Light grey background */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+
+        /* Style for the container */
+        .container {
+            margin-top: 20px; /* Top margin for spacing */
+        }
+
+        /* Style for the card component */
+        .card {
+            background-color: #8D493A; /* Dark brown background */
+            color: #FFFFFF; /* White text color */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Custom button style */
+        .btn-custom {
+            background-color: #F8EDE3; /* Light beige background */
+            color: black; /* Black text color */
+        }
+
+            /* Button hover style */
+            .btn-custom:hover {
+                background-color: #efdac6; /* Slightly darker beige on hover */
+            }
+
+        /* Style for form groups */
+        .form-group {
+            margin-bottom: 15px; /* Bottom margin for spacing between form elements */
+        }
+
+        /* Style for alert messages */
+        .alert {
+            margin-top: 15px; /* Top margin for spacing */
+        }
+
+        /* Style for responsive images */
+        .img-fluid {
+            max-height: 400px; /* Maximum height for images */
+            object-fit: cover; /* Maintain aspect ratio and cover container */
+            border-radius: 10px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Left side with illustration image (visible on medium screens and above) -->
+            <div class="col-md-6 d-none d-md-block">
+                <img src="~/images/small-cap.svg" alt="Update SIP" class="img-fluid"> <!-- Illustration image -->
+            </div>
+            <!-- Right side with the form for updating SIP -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center">Update SIP Amount</h2> <!-- Form title -->
+                    </div>
+                    <div class="card-body">
+                        <!-- Form for updating SIP amount -->
+                        <form asp-action="UpdateSIP" method="post">
+                            <div class="form-group">
+                                <!-- Label and input for new SIP amount -->
+                                <label asp-for="NewSIPAmount" class="control-label">New SIP Amount</label>
+                                <input asp-for="NewSIPAmount" class="form-control" />
+                                <!-- Validation message for SIP amount -->
+                                <span asp-validation-for="NewSIPAmount" class="text-danger"></span>
+                            </div>
+
+                            <!-- Hidden field for PortfolioId -->
+                            <input type="hidden" asp-for="PortfolioId" />
+
+                            <!-- Submit button for the form -->
+                            <button type="submit" class="btn btn-custom">Update</button>
+                        </form>
+
+                        <!-- Display success message if available -->
+                        @if (ViewBag.Message != null)
+                        {
+                            <div class="alert alert-success mt-3">
+                                @ViewBag.Message
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+            <!-- Render client-side validation scripts -->
+        }
+    }
+</body>
+</html>

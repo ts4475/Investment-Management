@@ -1,0 +1,234 @@
+﻿@model Investment1.ViewModels.MutualFundDetailsViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <!-- Include Bootstrap CSS from a CDN for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Styling for the calculator container */
+        .calculator-container {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #8D493A; /* Dark background for contrast */
+            color: #FFFFFF; /* White text color */
+        }
+
+        /* Custom button margin */
+        .btn-custom {
+            margin-right: 10px;
+        }
+
+        /* Center align text in ROI table */
+        .roi-table th, .roi-table td {
+            text-align: center;
+        }
+
+        /* Error message styling */
+        .form-error {
+            color: red;
+            font-size: 0.875em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <!-- Heading for the mutual fund name -->
+        <h2>@Model.MutualFund.MfName</h2>
+
+        <!-- Display mutual fund details -->
+        <p>Category: @Model.MutualFund.Category</p>
+        <p>NAV: Rs @Model.MutualFund.NAV</p>
+        <p>Lock-in Period: @Model.MutualFund.LockinPeriod months</p>
+
+        <!-- ROI Data Table -->
+        <h3>ROI Data</h3>
+        <table class="table roi-table">
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>1 Month</th>
+                    <th>6 Months</th>
+                    <th>1 Year</th>
+                    <th>3 Years</th>
+                    <th>5 Years</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ROI (%)</td>
+                    <!-- Display ROI values for different periods -->
+                    <td>@Model.ROI.ROI1M</td>
+                    <td>@Model.ROI.ROI6M</td>
+                    <td>@Model.ROI.ROI1Y</td>
+                    <td>@Model.ROI.ROI3Y</td>
+                    <td>@Model.ROI.ROI5Y</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Return Calculator -->
+        <div class="calculator-container">
+            <h3>Return Calculator</h3>
+
+            <!-- Input field for investment amount -->
+            <div class="mb-3">
+                <label for="amountInput" class="form-label">Investment Amount (Rs)</label>
+                <input type="number" id="amountInput" class="form-control" placeholder="Enter amount" />
+                <div id="amountError" class="form-error"></div> <!-- Error message container -->
+            </div>
+
+            <!-- Radio buttons for selecting investment type -->
+            <div class="mb-3">
+                <label class="form-label">Investment Type</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="investmentType" id="oneTime" value="oneTime" checked onchange="updateButtons()">
+                    <label class="form-check-label" for="oneTime">
+                        One-time
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="investmentType" id="sip" value="sip" onchange="updateButtons()">
+                    <label class="form-check-label" for="sip">
+                        Monthly SIP
+                    </label>
+                </div>
+            </div>
+
+            <!-- Radio buttons for selecting investment tenure -->
+            <div class="mb-3">
+                <label class="form-label">Investment Tenure</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tenure" id="tenure1" value="1" checked>
+                    <label class="form-check-label" for="tenure1">
+                        1 Year
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tenure" id="tenure2" value="2">
+                    <label class="form-check-label" for="tenure2">
+                        2 Years
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tenure" id="tenure3" value="3">
+                    <label class="form-check-label" for="tenure3">
+                        3 Years
+                    </label>
+                </div>
+            </div>
+
+            <!-- Button to calculate the estimated return -->
+            <button type="button" class="btn" style="background-color: #F8EDE3; color: #000000;" onclick="calculateReturn()">Calculate Return</button>
+
+            <!-- Display the estimated return -->
+            <div class="mt-3">
+                <h4>Estimated Return: <span id="result">Rs 0.00</span></h4>
+            </div>
+
+            <!-- Investment buttons -->
+            <div class="mt-4">
+                <a href="#" id="oneTimeInvestmentButton" class="btn" style="background-color: #F8EDE3; color: #000000;" onclick="startInvestment('oneTime')">Start One-time Investment</a>
+                <a href="#" id="monthlySIPButton" class="btn" style="background-color: #F8EDE3; color: #000000;" onclick="startInvestment('sip')">Start Monthly SIP</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap Bundle JS (includes Popper for dropdowns and tooltips) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Function to update the state of investment buttons based on selected investment type
+        function updateButtons() {
+            const investmentType = document.querySelector('input[name="investmentType"]:checked').value;
+            const oneTimeButton = document.getElementById('oneTimeInvestmentButton');
+            const sipButton = document.getElementById('monthlySIPButton');
+
+            if (investmentType === 'oneTime') {
+                sipButton.classList.add('disabled');
+                sipButton.setAttribute('aria-disabled', 'true');
+            } else {
+                sipButton.classList.remove('disabled');
+                sipButton.removeAttribute('aria-disabled');
+            }
+
+            if (investmentType === 'sip') {
+                oneTimeButton.classList.add('disabled');
+                oneTimeButton.setAttribute('aria-disabled', 'true');
+            } else {
+                oneTimeButton.classList.remove('disabled');
+                oneTimeButton.removeAttribute('aria-disabled');
+            }
+        }
+
+        // Function to calculate the return based on user input
+        function calculateReturn() {
+            // Get input values
+            const amountInput = document.getElementById('amountInput');
+            const amount = parseFloat(amountInput.value);
+            const investmentType = document.querySelector('input[name="investmentType"]:checked').value;
+            const tenure = parseInt(document.querySelector('input[name="tenure"]:checked').value);
+
+            // Validate the amount
+            if (isNaN(amount) || amount <= 100) {
+                document.getElementById('amountError').innerText = 'Amount must be more than Rs 100.';
+                return;
+            } else {
+                document.getElementById('amountError').innerText = '';
+            }
+
+            // ROI values from the model
+            const roi1Y = @Model.ROI.ROI1Y;
+            const roi3Y = @Model.ROI.ROI3Y;
+
+            let roi;
+            switch (tenure) {
+                case 1:
+                    roi = roi1Y;
+                    break;
+                case 2:
+                    roi = (roi1Y * 2); // Simplified example for 2 years
+                    break;
+                case 3:
+                    roi = roi3Y;
+                    break;
+                default:
+                    roi = 0;
+            }
+
+            let finalAmount = 0;
+
+            // Calculate return based on investment type
+            if (investmentType === 'oneTime') {
+                finalAmount = amount * (1 + (roi / 100));
+            } else if (investmentType === 'sip') {
+                // Simplified SIP calculation
+                finalAmount = amount * ((1 + (roi / 100)) * tenure);
+            }
+
+            // Display result
+            document.getElementById('result').innerText = `Rs ${finalAmount.toFixed(2)}`;
+        }
+
+        // Function to start investment based on selected type
+        function startInvestment(investmentType) {
+            const amount = document.getElementById('amountInput').value;
+            const url = investmentType === 'oneTime' ?
+                `@Url.Action("OneTimeInvestment", "MutualFund", new { mfId = Model.MutualFund.MfId })` :
+                `@Url.Action("MonthlySIPInvestment", "MutualFund", new { mfId = Model.MutualFund.MfId })`;
+            window.location.href = `${url}?amount=${amount}`;
+        }
+
+        // Initial call to update buttons based on the default selected investment type
+        updateButtons();
+    </script>
+</body>
+</html>

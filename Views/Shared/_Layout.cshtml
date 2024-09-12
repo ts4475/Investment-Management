@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Groww</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+    <header style="background-color: #8D493A; color: #FFFFFF">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/" style="color: #FFFFFF;">Groww</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" style="color: #FFFFFF;">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Portfolio" style="color: #FFFFFF;">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Support/Create" style="color: #FFFFFF;">Support</a>
+                    </li>
+                    @if (Context.Session.GetInt32("UserId") != null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/UserAuthentication/Profile" style="color: #FFFFFF;">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/UserAuthentication/Logout" style="color: #FFFFFF;">Logout</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/UserRegistration/BasicUser" style="color: #FFFFFF;">Sign Up</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main role="main" style="flex: 1; padding: 1rem; background-color: #F8EDE3">
+        @RenderBody()
+        <!-- Include jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+        <!-- Include Popper.js (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Include Bootstrap JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        @await RenderSectionAsync("Scripts", required: false)
+    </main>
+    <footer style="background-color: #8D493A; color: #FFFFFF; padding: 1rem; text-align: center; margin-top: auto; height: 60px; display: flex; align-items: center; justify-content: center;">
+        <div class="container">
+            <p class="mb-0">© 2024 Groww</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,313 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Investment1.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Investment1.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\Forgotpass.svg",
+      "PackagePath": "staticwebassets\\images\\Forgotpass.svg"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\Login-anime.gif",
+      "PackagePath": "staticwebassets\\images\\Login-anime.gif"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\Pie chart-bro.svg",
+      "PackagePath": "staticwebassets\\images\\Pie chart-bro.svg"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\Profile.svg",
+      "PackagePath": "staticwebassets\\images\\Profile.svg"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\Signup-anime.gif",
+      "PackagePath": "staticwebassets\\images\\Signup-anime.gif"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\Support Image.svg",
+      "PackagePath": "staticwebassets\\images\\Support Image.svg"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\large-cap.svg",
+      "PackagePath": "staticwebassets\\images\\large-cap.svg"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\mid-cap.svg",
+      "PackagePath": "staticwebassets\\images\\mid-cap.svg"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\mutual-funds-index.svg",
+      "PackagePath": "staticwebassets\\images\\mutual-funds-index.svg"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\small-cap.svg",
+      "PackagePath": "staticwebassets\\images\\small-cap.svg"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\images\\transaction-success.svg",
+      "PackagePath": "staticwebassets\\images\\transaction-success.svg"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\localuser\\source\\repos\\Final-update 3-45pm\\v2\\Investment front-end\\Investment1 total update\\Investment1\\wwwroot\\site.css",
+      "PackagePath": "staticwebassets\\site.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Investment1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Investment1.props",
+      "PackagePath": "build\\Investment1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Investment1.props",
+      "PackagePath": "buildMultiTargeting\\Investment1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Investment1.props",
+      "PackagePath": "buildTransitive\\Investment1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

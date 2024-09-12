@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Investment1.Models.Transaction>
+
+<h1>Transaction List</h1> <!-- Main heading for the page -->
+
+<div class="container">
+    <!-- Table to display the list of transactions -->
+    <table class="table table-striped">
+        <!-- Table header -->
+        <thead>
+            <tr>
+                <!-- Column headers for transaction details -->
+                <th>Transaction ID</th>
+                <th>Type</th>
+                <th>SIP Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <!-- Table body with transaction data -->
+        <tbody>
+            @foreach (var transaction in Model) <!-- Loop through each transaction in the model -->
+            {
+                <tr>
+                    <!-- Display each transaction's details -->
+                    <td>@transaction.TransactionId</td> <!-- Transaction ID -->
+                    <td>@transaction.Type</td> <!-- Transaction type -->
+                    <td>@transaction.SipAmount</td> <!-- SIP amount -->
+                    <td>@transaction.CreatedAt.ToString("d")</td> <!-- Transaction date in short format -->
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

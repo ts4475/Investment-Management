@@ -1,0 +1,135 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Investment1
+build_property.RootNamespace = Investment1
+build_property.ProjectDir = C:\Users\localuser\source\repos\Final-update 3-45pm\v2\Investment front-end\Investment1 total update\Investment1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\localuser\source\repos\Final-update 3-45pm\v2\Investment front-end\Investment1 total update\Investment1
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Make Investment/InvestmentType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFrZSBJbnZlc3RtZW50XEludmVzdG1lbnRUeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/MutualFund/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXV0dWFsRnVuZFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/MutualFund/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXV0dWFsRnVuZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/MutualFund/MonthlySIPInvestment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXV0dWFsRnVuZFxNb250aGx5U0lQSW52ZXN0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/MutualFund/OneTimeInvestment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXV0dWFsRnVuZFxPbmVUaW1lSW52ZXN0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/MutualFund/TransactionSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXV0dWFsRnVuZFxUcmFuc2FjdGlvblN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Portfolio/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Portfolio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Portfolio/TransactionList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXFRyYW5zYWN0aW9uTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Portfolio/UpdateSIP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXFVwZGF0ZVNJUC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Support/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Support/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Support/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxTdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Transaction/TransactionList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25cVHJhbnNhY3Rpb25MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/UserAuthentication/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/UserAuthentication/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/UserAuthentication/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/UserAuthentication/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXFJlc2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/UserRegistration/BankDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJlZ2lzdHJhdGlvblxCYW5rRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/UserRegistration/BasicUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJlZ2lzdHJhdGlvblxCYXNpY1VzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/UserRegistration/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJlZ2lzdHJhdGlvblxDb25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/UserRegistration/PersonalDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclJlZ2lzdHJhdGlvblxQZXJzb25hbERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/localuser/source/repos/Final-update 3-45pm/v2/Investment front-end/Investment1 total update/Investment1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8yu17lfemv

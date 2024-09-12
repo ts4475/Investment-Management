@@ -1,0 +1,124 @@
+﻿@model IEnumerable<Investment1.Models.Transaction>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction List</title>
+    <!-- Include Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style for the body */
+        body {
+            background-color: #f8f9fa; /* Light grey background */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+
+        /* Style for the container */
+        .container {
+            margin-top: 30px; /* Top margin for spacing */
+        }
+
+        /* Style for the table */
+        .table {
+            background-color: #ffffff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Hide overflow content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            border-collapse: collapse; /* Collapse borders */
+        }
+
+            /* Style for table headers */
+            .table thead {
+                background-color: #8D493A; /* Dark brown background */
+                color: #ffffff; /* White text color */
+            }
+
+            /* Style for table cells */
+            .table th, .table td {
+                vertical-align: middle; /* Align text vertically */
+                padding: 15px; /* Padding inside cells */
+                text-align: left; /* Align text to the left */
+            }
+
+            /* Style for table headers */
+            .table th {
+                font-weight: bold; /* Bold text for headers */
+            }
+
+            /* Style for odd rows in the table body */
+            .table tbody tr:nth-child(odd) {
+                background-color: #f1f1f1; /* Light grey background for odd rows */
+            }
+
+            /* Style for table rows on hover */
+            .table tbody tr:hover {
+                background-color: #e9ecef; /* Slightly darker grey on hover */
+            }
+
+        /* Style for the page title */
+        .page-title {
+            color: #8D493A; /* Dark brown text color */
+            margin-bottom: 20px; /* Bottom margin for spacing */
+        }
+
+        /* Style for images in the image container */
+        .image-container img {
+            max-width: 100%; /* Ensure image does not exceed container width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Style for the card component */
+        .card {
+            border: none; /* Remove border */
+            background-color: transparent; /* Transparent background */
+        }
+
+        /* Style for card body */
+        .card-body {
+            padding: 0; /* No padding */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Image Section -->
+                <div class="image-container">
+                    <img src="~/images/mid-cap.svg" alt="Descriptive Alt Text"> <!-- Placeholder image -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Table Section -->
+                <h2 class="page-title">Transaction History</h2> <!-- Title of the page -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <!-- Table headers -->
+                            <th>Transaction Amount (Rs)</th>
+                            <th>Date of Payment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop through each transaction in the model -->
+                        @foreach (var transaction in Model)
+                        {
+                            <tr>
+                                <!-- Display transaction amount and date -->
+                                <td>@transaction.SipAmount</td>
+                                <td>@transaction.UpdatedAt.ToString("d MMM yyyy HH:mm:ss")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS bundle for functionality -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

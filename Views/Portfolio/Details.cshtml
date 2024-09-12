@@ -1,0 +1,194 @@
+﻿@model Investment1.Models.PortfolioDetailsViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Styles for the body of the page */
+        body {
+            background-color: #f8f9fa; /* Light background color */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+
+        /* Styles for the container to add margin at the top */
+        .container {
+            margin-top: 30px;
+        }
+
+        /* Card styling for displaying portfolio details */
+        .card {
+            background-color: #8D493A; /* Dark brown background color */
+            color: #FFFFFF; /* White text color */
+            border-radius: 10px; /* Rounded corners for the card */
+            overflow: hidden; /* Ensure content does not overflow */
+        }
+
+        /* Padding inside the card body */
+        .card-body {
+            padding: 20px;
+        }
+
+        /* Styles for the image inside the card */
+        .image-container img {
+            max-width: 100%; /* Ensure the image scales with the container width */
+            border-radius: 10px; /* Rounded corners for the image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Custom button styling */
+        .btn-custom {
+            background-color: #F8EDE3; /* Light cream background color */
+            color: #000000; /* Black text color */
+        }
+
+            /* Hover effect for custom buttons */
+            .btn-custom:hover {
+                background-color: #e0d4c9; /* Slightly darker cream on hover */
+            }
+
+        /* Flexbox container for button grouping */
+        .button-group {
+            display: flex;
+            gap: 10px; /* Space between buttons */
+            flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+            margin-top: 10px;
+        }
+
+            /* Style for each button in the button group */
+            .button-group .btn {
+                flex: 1 1 auto; /* Adjust button width dynamically */
+                min-width: 150px; /* Minimum width for buttons */
+            }
+
+        /* Margin for button group container */
+        .btn-group-container {
+            margin-top: 10px;
+        }
+
+        /* Color style for text indicating change */
+        .color-change {
+            color: #F8EDE3; /* Light cream color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Image Section -->
+            <div class="col-md-4">
+                <div class="image-container">
+                    <img src="~/images/large-cap.svg" alt="Portfolio Image"> <!-- Portfolio image -->
+                </div>
+            </div>
+            <!-- Details Section -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Display Portfolio Name -->
+                        <h5 class="card-title">@Model.MfName</h5>
+                        <!-- Display Total Investment -->
+                        <p class="card-text">Total Investment: @Model.TotalInvestment</p>
+                        <!-- Display Units -->
+                        <p class="card-text">Units: @Model.Unit</p>
+                        <!-- Display NAV -->
+                        <p class="card-text">NAV: @Model.NAV</p>
+                        <!-- Display SIP Amount if Portfolio Type is SIP -->
+                        @if (Model.PortfolioType == Investment1.Models.PortfolioType.SIP)
+                        {
+                            <p class="card-text">SIP Amount: @Model.SipAmount</p>
+                        }
+                        <!-- Display Created At Date -->
+                        <p class="card-text">Created At: @Model.CreatedAt.ToString("d")</p>
+                        <!-- Display Status -->
+                        <p class="card-text">Status: @Model.Status</p>
+                        <!-- Display Total Gains -->
+                        <p class="card-text">Total Gains: @Model.TotalGains</p>
+                        <!-- Actions based on Portfolio Status -->
+                        @if (Model.Status == Investment1.Models.PortfolioStatus.Active)
+                        {
+                            <div class="button-group">
+                                <!-- If Portfolio Type is SIP -->
+                                @if (Model.PortfolioType == Investment1.Models.PortfolioType.SIP)
+                                {
+                                    <!-- Form to Pay SIP -->
+                                    <form id="paySIPForm" asp-action="PaySIP" method="post">
+                                        <input type="hidden" name="id" value="@Model.InvestmentId" />
+                                        <button id="paySIPButton" type="submit" class="btn btn-custom" data-bs-toggle="tooltip" title="You can pay after some time..">Pay SIP</button>
+                                    </form>
+
+                                    <!-- Form to Update SIP -->
+                                    <form asp-action="UpdateSIP" method="get">
+                                        <input type="hidden" name="id" value="@Model.InvestmentId" />
+                                        <button type="submit" class="btn btn-custom">Update SIP</button>
+                                    </form>
+
+                                    <!-- Link to Show Transactions -->
+                                    <a href="@Url.Action("TransactionList", "Portfolio", new { id = Model.InvestmentId })" class="btn btn-custom">Show Transactions</a>
+                                }
+                                <!-- Form to Redeem Amount -->
+                                <form asp-action="Redeem" method="post">
+                                    <input type="hidden" name="id" value="@Model.InvestmentId" />
+                                    <button type="submit" class="btn btn-custom">Redeem Amount</button>
+                                </form>
+                            </div>
+                        }
+                        else
+                        {
+                            <!-- Message indicating portfolio is not active -->
+                            <H4 class="color-change">This portfolio is not active.</H4>
+                        }
+
+                        <!-- Display Alert Message if available -->
+                        @if (ViewBag.AlertMessage != null)
+                        {
+                            <div class="alert alert-info mt-3">
+                                @ViewBag.AlertMessage
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paySIPButton = document.getElementById("paySIPButton");
+
+            if (paySIPButton) {
+                const interval = 15000; // 15 seconds
+
+                function enableButton() {
+                    paySIPButton.disabled = false;
+                    paySIPButton.setAttribute('data-bs-original-title', '');
+                    var tooltip = bootstrap.Tooltip.getInstance(paySIPButton);
+                    if (tooltip) {
+                        tooltip.hide();
+                    }
+                }
+
+                function startTimer() {
+                    setInterval(() => {
+                        enableButton(); // Re-enable the button every 15 seconds
+                    }, interval);
+                }
+
+                // Initialize Bootstrap tooltips
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+                });
+
+                paySIPButton.disabled = true;
+                startTimer();
+            }
+        });
+    </script>
+</body>
+</html>

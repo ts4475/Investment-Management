@@ -1,0 +1,257 @@
+﻿@using Newtonsoft.Json
+@{
+    // Retrieve data from ViewBag and cast to appropriate types
+    var activePortfolios = ViewBag.ActivePortfolios as IEnumerable<Investment1.Models.PortfolioViewModel>;
+    var inactivePortfolios = ViewBag.InactivePortfolios as IEnumerable<Investment1.Models.PortfolioViewModel>;
+    var totalInvested = ViewBag.TotalInvested as decimal?;
+    var totalGains = ViewBag.TotalGains as decimal?;
+
+    // Calculate total investments for active and inactive portfolios
+    var totalActiveInvested = activePortfolios?.Sum(p => p.TotalInvestment) ?? 0;
+    var totalInactiveInvested = inactivePortfolios?.Sum(p => p.TotalInvestment) ?? 0;
+
+    // Serialize the portfolio data to JSON for use in JavaScript
+    var activePortfoliosJson = JsonConvert.SerializeObject(activePortfolios);
+    var inactivePortfoliosJson = JsonConvert.SerializeObject(inactivePortfolios);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <!-- Include Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Chart.js library for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Style for investment items */
+        .investment-item {
+            cursor: pointer; /* Pointer cursor on hover */
+            background-color: #8D493A; /* Dark brown background */
+            color: #FFFFFF; /* White text color */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        /* Style for investment headers */
+        .investment-header {
+            padding: 15px;
+            border-bottom: 1px solid #FFFFFF; /* White border at the bottom */
+        }
+
+        /* Style for investment details */
+        .investment-details {
+            padding: 15px;
+        }
+
+        /* Style for text within investment details */
+        .investment-text {
+            margin: 0;
+        }
+
+        /* Container for charts */
+        .chart-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            /* Style for chart images */
+            .chart-container img {
+                max-width: 300px; /* Maximum width for images */
+                height: auto; /* Maintain aspect ratio */
+                margin-right: 50px; /* Space between image and chart */
+            }
+
+            /* Style for chart canvas */
+            .chart-container canvas {
+                width: 300px !important; /* Fixed width for canvas */
+                height: 300px !important; /* Fixed height for canvas */
+            }
+
+        /* Style for total investment and gains info */
+        .total-info-container {
+            background-color: #8D493A; /* Dark brown background */
+            color: #FFFFFF; /* White text color */
+            padding: 15px;
+            border-radius: 5px; /* Rounded corners */
+            text-align: center;
+        }
+
+            /* Style for headings in the total info container */
+            .total-info-container h4 {
+                margin: 0;
+            }
+
+        /* Style for pagination controls */
+        .pagination-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end; /* Align pagination controls to the right */
+            padding-right: 15px; /* Add right padding if needed */
+        }
+
+            /* Style for pagination buttons */
+            .pagination-controls button {
+                margin: 0 5px; /* Space between pagination buttons */
+            }
+
+        /* Additional spacing for investment sections */
+        .investment-section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Investment Distribution Section -->
+        <div class="row investment-section">
+            <div class="col-md-12">
+                <h3 style="text-align: center;">Investment Distribution</h3>
+                <div class="chart-container">
+                    <img src="/images/Pie chart-bro.svg" alt="Investment Icon" /> <!-- Image representing investment distribution -->
+                    <canvas id="investmentPieChart"></canvas> <!-- Canvas element for Pie chart -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Invested and Total Gains Section -->
+        <div class="row investment-section">
+            <div class="col-md-12">
+                <div class="total-info-container">
+                    <!-- Display total invested amount -->
+                    <h4>Total Invested: @totalInvested</h4>
+                    <!-- Display total gains amount -->
+                    <h4>Total Gains: @totalGains</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Investments Section -->
+        <h3>Active Investments</h3>
+        <div class="row" id="activeInvestmentsContainer">
+            <!-- Active investments will be dynamically injected here -->
+        </div>
+        <div class="pagination-controls" id="activePaginationControls"></div> <!-- Pagination controls for active investments -->
+        <!-- Inactive Investments Section -->
+        <h3>Inactive Investments</h3>
+        <div class="row" id="inactiveInvestmentsContainer">
+            <!-- Inactive investments will be dynamically injected here -->
+        </div>
+        <div class="pagination-controls" id="inactivePaginationControls"></div> <!-- Pagination controls for inactive investments -->
+    </div>
+
+    <!-- Chart.js Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('investmentPieChart').getContext('2d');
+
+            // Data for the pie chart
+            var data = {
+                labels: ['Active Investments', 'Inactive Investments'],
+                datasets: [{
+                    label: 'Investment Distribution',
+                    data: [@totalActiveInvested, @totalInactiveInvested], // Data for the pie chart
+                    backgroundColor: ['#8D493A', '#B3B3B3'], // Colors for the pie chart slices
+                    borderColor: ['#FFFFFF', '#FFFFFF'], // Border color for slices
+                    borderWidth: 1
+                }]
+            };
+
+            var config = {
+                type: 'pie', // Pie chart type
+                data: data,
+                options: {
+                    responsive: true, // Make chart responsive
+                    plugins: {
+                        legend: {
+                            position: 'top', // Position of the legend
+                        },
+                        tooltip: {
+                            callbacks: {
+                                // Custom tooltip label format
+                                label: function (tooltipItem) {
+                                    var value = tooltipItem.raw;
+                                    return tooltipItem.label + ': ' + value.toFixed(2);
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            // Create the pie chart
+            new Chart(ctx, config);
+
+            // Deserialize JSON data for active and inactive portfolios
+            var activePortfolios = @Html.Raw(activePortfoliosJson);
+            var inactivePortfolios = @Html.Raw(inactivePortfoliosJson);
+            const itemsPerPage = 4; // Number of items per page
+
+            // Function to render portfolios and pagination controls
+            function renderInvestments(portfolios, containerId, paginationControlsId, urlAction) {
+                var container = document.getElementById(containerId);
+                var paginationControls = document.getElementById(paginationControlsId);
+                var totalPages = Math.ceil(portfolios.length / itemsPerPage);
+                var currentPage = 1; // Track current page
+
+                // Function to render a specific page of portfolios
+                function renderPage(page) {
+                    console.log(`Rendering page ${page}`); // Debugging line
+                    container.innerHTML = '';
+                    var start = (page - 1) * itemsPerPage;
+                    var end = Math.min(start + itemsPerPage, portfolios.length);
+                    for (var i = start; i < end; i++) {
+                        var portfolio = portfolios[i];
+                        container.innerHTML += `
+                <div class="col-md-6 mb-3">
+                <div class="investment-item" onclick="window.location.href='${urlAction}?id=${portfolio.InvestmentId}'">
+                <div class="investment-header">
+                <h5 class="investment-title">${portfolio.MfName}</h5>
+                </div>
+                <div class="investment-details">
+                <p class="investment-text">Total Investment: ${portfolio.TotalInvestment}</p>
+                <p class="investment-text">Units: ${portfolio.Unit}</p>
+                <p class="investment-text">NAV: ${portfolio.NAV}</p>
+                </div>
+                </div>
+                </div>
+                                                                `;
+                    }
+                }
+
+                // Function to create pagination controls
+                function createPaginationControls() {
+                    paginationControls.innerHTML = '';
+                    for (var i = 1; i <= totalPages; i++) {
+                        var button = document.createElement('button');
+                        button.className = 'btn';
+                        button.style.backgroundColor = '#8D493A'; /* Dark brown background */
+                        button.style.color = '#FFFFFF'; /* White text color */
+                        button.textContent = i; // Page number
+                        button.onclick = function (page) {
+                            return function () {
+                                currentPage = page;
+                                renderPage(page); // Render the selected page
+                            };
+                        }(i);
+                        paginationControls.appendChild(button);
+                    }
+                }
+
+                // Initial render of portfolios and pagination controls
+                renderPage(currentPage);
+                createPaginationControls();
+            }
+
+            // Define URL action for the "Details" page
+            var urlAction = '@Url.Action("Details")';
+
+            // Initialize pagination and rendering for active and inactive investments
+            renderInvestments(activePortfolios, 'activeInvestmentsContainer', 'activePaginationControls', urlAction);
+            renderInvestments(inactivePortfolios, 'inactiveInvestmentsContainer', 'inactivePaginationControls', urlAction);
+        });
+    </script>
+</body>
+</html>

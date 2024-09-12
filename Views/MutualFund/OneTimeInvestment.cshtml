@@ -1,0 +1,72 @@
+﻿@model Investment1.Models.InvestmentViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Time Investment</title>
+    <!-- Include Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style for displaying form validation errors */
+        .form-error {
+            color: red;
+            font-size: 0.875em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>One-Time Investment</h2>
+        <!-- Form for processing one-time investments -->
+        <form method="post" action="/MutualFund/ProcessOneTimeInvestment" onsubmit="return validateForm()">
+            <!-- Hidden field to pass the mutual fund ID -->
+            <input type="hidden" name="MfId" value="@Model.MfId" />
+            <!-- Input for the investment amount -->
+            <div class="mb-3">
+                <label for="sipAmount" class="form-label">Investment Amount (Rs)</label>
+                <input type="number" class="form-control" id="sipAmount" name="SIPAmount" required />
+                <!-- Error message for invalid amount -->
+                <div id="amountError" class="form-error"></div>
+            </div>
+            <!-- Submit button for the form -->
+            <button type="submit" class="btn" style="background-color: #8D493A; color: #FFFFFF">Pay</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to run when the page loads
+        window.onload = function () {
+            // Retrieve query parameters from the URL
+            const params = new URLSearchParams(window.location.search);
+            // Extract 'amount' parameter value if it exists
+            const amount = params.get('amount');
+            if (amount) {
+                // Set the amount value in the input field
+                document.getElementById('sipAmount').value = amount;
+            }
+        };
+
+        // Function to validate the form before submission
+        function validateForm() {
+            // Get the amount input field and its value
+            const amountInput = document.getElementById('sipAmount');
+            const amount = parseFloat(amountInput.value);
+            const errorElement = document.getElementById('amountError');
+
+            // Check if the amount is a number and at least 100
+            if (isNaN(amount) || amount < 100) {
+                // Display an error message if validation fails
+                errorElement.innerText = 'Amount must be at least Rs 100.';
+                return false; // Prevent form submission
+            } else {
+                // Clear any previous error message
+                errorElement.innerText = '';
+                return true; // Allow form submission
+            }
+        }
+    </script>
+</body>
+</html>

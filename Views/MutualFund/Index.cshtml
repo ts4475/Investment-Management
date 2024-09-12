@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Investment1.Models.MutualFund>
+
+@{
+    ViewData["Title"] = "Explore New Mutual Funds...";
+    var funds = Model.ToList(); // Convert to List for easier manipulation in JavaScript
+}
+<div class="container mt-3">
+    <div class="row">
+        <!-- Image Column -->
+        <div class="col-md-4 d-flex justify-content-center align-items-center" style="text-align: center;">
+            <img src="~/images/mutual-funds-index.svg" alt="Explore Mutual Funds" class="img-fluid center-image">
+        </div>
+
+        <!-- Content Column -->
+        <div class="col-md-8">
+            <h2>@ViewData["Title"]</h2>
+            <br />
+            <!-- Search input -->
+            <div style="margin-bottom: 10px;">
+                <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search for mutual funds..." style="
+                    padding: 5px;
+                    width: 100%;
+                    max-width: 300px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                ">
+            </div>
+
+            <table id="fundTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>NAV</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var fund in funds)
+                    {
+                        <tr>
+                            <td>@fund.MfName</td>
+                            <td>@fund.NAV</td>
+                            <td>
+                                <a href="@Url.Action("Details", "MutualFund", new { id = fund.MfId })" class="btn" style="background-color: #8D493A; color: #FFFFFF">View Details</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function filterTable() {
+        var input = document.getElementById("searchInput");
+        var filter = input.value.toLowerCase();
+        var table = document.getElementById("fundTable");
+        var rows = table.querySelectorAll("tbody tr");
+
+        rows.forEach(row => {
+            var cells = row.getElementsByTagName("td");
+            var textContent = Array.from(cells).map(cell => cell.textContent.toLowerCase()).join(" ");
+            row.style.display = textContent.includes(filter) ? "" : "none";
+        });
+    }
+</script>
+
+<style>
+    .center-image {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px; /* Adjust as needed */
+        object-fit: contain; /* Ensure the image maintains aspect ratio */
+        margin-top: 150px; /* Center horizontally */
+        display: block; /* Ensure it is displayed as a block-level element */
+        margin-left:0px;
+    }
+
+    .col-md-4 {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+</style>

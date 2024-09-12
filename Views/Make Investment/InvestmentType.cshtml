@@ -1,0 +1,66 @@
+﻿@model Investment1.ViewModels.InvestmentSelectionViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <!-- Include Bootstrap CSS from a CDN for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <!-- Heading displaying the name of the mutual fund -->
+        <h2>Invest in @Model.MutualFund.MfName</h2>
+
+        <!-- Display the category of the mutual fund -->
+        <p>Category: @Model.MutualFund.Category</p>
+
+        <!-- Display the current NAV (Net Asset Value) of the mutual fund -->
+        <p>NAV: Rs @Model.MutualFund.NAV</p>
+
+        <!-- Display the minimum SIP amount required for investment -->
+        <p>Minimum SIP: Rs @Model.MinimumSIPAmount</p>
+
+        <!-- Display the lock-in period for the mutual fund -->
+        <p>Lock-in Period: @Model.MutualFund.LockinPeriod years</p>
+
+        <!-- Investment Form for user to submit investment details -->
+        <form asp-action="SubmitInvestment" method="post">
+            <!-- Select investment type (One-Time or Monthly SIP) -->
+            <div class="mb-3">
+                <label for="investmentType" class="form-label">Select Investment Type</label>
+                <select id="investmentType" name="investmentType" class="form-select" required>
+                    <option value="OneTime">One-Time</option>
+                    <option value="SIP">Monthly SIP</option>
+                </select>
+            </div>
+
+            <!-- Input field for the amount to be invested -->
+            <div class="mb-3">
+                <label for="amount" class="form-label">Amount (Rs)</label>
+                <input type="number" id="amount" name="amount" class="form-control" required />
+            </div>
+
+            <!-- Input field for the number of units to be purchased -->
+            <div class="mb-3">
+                <label for="units" class="form-label">Number of Units</label>
+                <input type="number" id="units" name="units" class="form-control" required />
+            </div>
+
+            <!-- Hidden fields to pass mutual fund ID and user ID to the server -->
+            <input type="hidden" name="mfId" value="@Model.MutualFund.MfId" />
+            <input type="hidden" name="userId" value="@Model.UserId" />
+
+            <!-- Submit button for the form -->
+            <button type="submit" class="btn btn-primary">Pay</button>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap Bundle JS (includes Popper for dropdowns and tooltips) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
